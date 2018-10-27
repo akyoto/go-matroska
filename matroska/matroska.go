@@ -1,10 +1,11 @@
 package matroska
 
 import (
-	"github.com/pixelbender/go-matroska/ebml"
 	"log"
 	"os"
 	"time"
+
+	"github.com/blitzprog/go-matroska/ebml"
 )
 
 func Decode(file string) (*File, error) {
