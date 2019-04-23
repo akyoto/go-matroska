@@ -5,7 +5,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/blitzprog/go-matroska/ebml"
+	"github.com/akyoto/go-matroska/ebml"
 )
 
 func Decode(file string) (*File, error) {
