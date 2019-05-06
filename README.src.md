@@ -1,4 +1,4 @@
-# go-matroska
+# {name}
 
 [![Build Status](https://travis-ci.org/pixelbender/go-matroska.svg)](https://travis-ci.org/pixelbender/go-matroska)
 [![Coverage Status](https://coveralls.io/repos/github/pixelbender/go-matroska/badge.svg?branch=master)](https://coveralls.io/github/pixelbender/go-matroska?branch=master)
@@ -20,9 +20,14 @@ import (
     "github.com/pixelbender/go-matroska/matroska"
 )
 
-func main() 
+func main() {
+    doc, err := matroska.Decode("example.mkv")
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
     fmt.Println(doc.Segment.Info[0].Duration)
-
+}
 ```
 
 ## Specifications
